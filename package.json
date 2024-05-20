@@ -1,0 +1,17 @@
+{
+    "name": "movie-database-population",
+    "version": "1.0.0",
+    "description": "Populate MySQL and MongoDB databases with movie data from an Excel file",
+    "main": "index.js",
+    "scripts": {
+        "populate:mysql": "node populateMySQL.js",
+        "populate:mongo": "node populateMongoDB.js"
+    },
+    "dependencies": {
+        "mongodb": "^6.6.2",
+        "mongoose": "^5.10.9",
+        "mysql2": "^2.2.5",
+        "sequelize": "^6.6.5",
+        "xlsx": "^0.17.4"
+    }
+}

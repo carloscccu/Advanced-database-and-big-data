@@ -1,0 +1,20 @@
+# Use Node.js official image
+FROM node:14
+
+# Create app directory
+WORKDIR /usr/src/app
+
+# Install app dependencies
+COPY package*.json ./
+
+RUN npm install
+
+# Bundle app source
+COPY . .
+
+# Add the Excel file
+COPY MoviesData.xlsx /usr/src/app/MoviesData.xlsx
+
+# Run the MySQL population script
+CMD ["node", "populateMySQL.js"]
+
